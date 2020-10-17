@@ -28,7 +28,7 @@
 package leetcode.editor.cn;
 
 //爬楼梯
-
+// 经典动态规划问题
 public class P70_ClimbingStairs{
     public static void main(String[] args) {
         //测试代码
