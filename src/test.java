@@ -22,5 +22,15 @@ public class test {
             throw new IllegalArgumentException("No Two Sum Solution!");
         }
     }
+    public static String get2DArrayPrint(boolean[][] matrix) {
+        String output = new String();
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                output = output + (matrix[i][j] + "\t");
+            }
+            output = output + "\n";
+        }
+        return output;
+    }
 }
 
