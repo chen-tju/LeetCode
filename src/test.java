@@ -7,7 +7,10 @@ public class test {
         // TO TEST
         int [] nums = new int[]{2, 7, 11, 15};
         int target = 9;
-        System.out.println(solution.twoSum(nums,target));
+        int[] res = solution.twoSum(nums, target);
+        for(int num : res){
+            System.out.println(num);
+        }
     }
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
