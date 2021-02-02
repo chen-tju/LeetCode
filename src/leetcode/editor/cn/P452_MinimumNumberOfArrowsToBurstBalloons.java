@@ -68,7 +68,7 @@ public class P452_MinimumNumberOfArrowsToBurstBalloons{
         int[][] points1 = {{10,16},{2,8},{1,6},{7,12}};
         int[][] points2 = {{-2147483646,-2147483645},{2147483646,2147483647}};
         System.out.println(solution.findMinArrowShots(points1));
-        System.out.println(solution.findMinArrowShots(points2));
+//        System.out.println(solution.findMinArrowShots(points2));
 
     }
 //力扣代码-
@@ -78,7 +78,8 @@ class Solution {//贪心算法
         if(points.length == 0){
             return 0;
         }
-        Arrays.sort(points, (a,b) ->(a[1] > b[1] ? 1 : -1));
+//        Arrays.sort(points, (a,b) ->(a[1] > b[1] ? 1 : -1));
+        Arrays.sort(points, (a,b) -> (a[1] - b[1]));
         int res = 1;
         int tmp = points[0][1];
         for(int i = 1; i < points.length; i++){

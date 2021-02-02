@@ -70,6 +70,7 @@ public class P5_LongestPalindromicSubstring{
     }
 
     class Solution2{
+        //遍历每一个索引，以这个索引为中心，利用“回文串”中心对称的特点，往两边扩散，看最多能扩散多远。
         public String longestPalindrome(String s){
             //中心扩展法
             int len = s.length();
