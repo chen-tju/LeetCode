@@ -1,10 +1,9 @@
 import java.util.HashMap;
 import java.util.Map;
-import java.util.PriorityQueue;
 
-public class test {
+public class Test {
     public static void main(String[] args) {
-        Solution solution = new test().new Solution();
+        Solution solution = new Test().new Solution();
         // TO TEST
         int [] nums = new int[]{2, 7, 11, 15};
         int target = 9;
