@@ -1,3 +1,5 @@
+package Test;
+
 public class Test_static {
 
     static {

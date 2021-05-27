@@ -1,3 +1,5 @@
+package Test;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -5,7 +7,7 @@ public class Test_synchonized {
 //    public static void main(String[] args) {
 //        //使用ExecutorService执行两个线程，调用同一个对象的同步代码块，两个线程会进行同步
 //        //一个线程进入同步语句块时，另一个线程必须等待
-//        SynchronizedExample e1 = new SynchronizedExample();
+//        Test.SynchronizedExample e1 = new Test.SynchronizedExample();
 //        ExecutorService executorService = Executors.newCachedThreadPool();
 //        executorService.execute(() -> e1.func1());
 //        executorService.execute(() -> e1.func1());
