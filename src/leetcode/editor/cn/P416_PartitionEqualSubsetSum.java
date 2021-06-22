@@ -47,11 +47,7 @@ public class P416_PartitionEqualSubsetSum{
 //力扣代码
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    public boolean canPartition(int[] nums) {
-        int len = nums.length;
-        if(len == 0){
-            return false;
-        }
+    public boolean canPartition(int[] nums){
         int sum = 0;
         for(int num : nums){
             sum += num;
@@ -60,31 +56,54 @@ class Solution {
             return false;
         }
         int target = sum / 2;
-        boolean [][]dp = new boolean[len][target + 1];
-        //从nums数组中这len个数，判断是否可以组成target
-        //然后 01 判断是否选用第i个数字
+        int[] dp = new int[target + 1];
+        dp[0] = 1;
 
-        //dp[i][j] 表示从数组的 [0,i] 下标范围内选取若干个正整数（可以是 0 个），
-        // 是否存在一种选取方案使得被选取的正整数的和等于 j。
-        // 初始时，dp 中的全部元素都是 false。
-        //
-        for(int i = 0; i < len; i++){
-            dp[i][0] = true;
-        }
-        dp[0][nums[0]] = true;
-        for (int i = 1; i < len; i++) {
-            int num = nums[i];
-            for (int j = 1; j <= target; j++) {
-                if (j >= num) {
-                    dp[i][j] = dp[i - 1][j] | dp[i - 1][j - num];
-                } else {
-                    dp[i][j] = dp[i - 1][j];
-                }
+        for(int num : nums){
+            for(int j = target; j >= num; j--){
+                dp[j] += dp[j - num];
             }
         }
-        return dp[len - 1][target];
-
+        return dp[target] != 0;
     }
+//    public boolean canPartition(int[] nums) {
+//        int len = nums.length;
+//        if(len == 0){
+//            return false;
+//        }
+//        int sum = 0;
+//        for(int num : nums){
+//            sum += num;
+//        }
+//        if(sum % 2 == 1){
+//            return false;
+//        }
+//        int target = sum / 2;
+//        boolean [][]dp = new boolean[len][target + 1];
+//        //从nums数组中这len个数，判断是否可以组成target
+//        //然后 01 判断是否选用第i个数字
+//
+//        //dp[i][j] 表示从数组的 [0,i] 下标范围内选取若干个正整数（可以是 0 个），
+//        // 是否存在一种选取方案使得被选取的正整数的和等于 j。
+//        // 初始时，dp 中的全部元素都是 false。
+//        //
+//        for(int i = 0; i < len; i++){
+//            dp[i][0] = true;
+//        }
+//        dp[0][nums[0]] = true;
+//        for (int i = 1; i < len; i++) {
+//            int num = nums[i];
+//            for (int j = 1; j <= target; j++) {
+//                if (j >= num) {
+//                    dp[i][j] = dp[i - 1][j] | dp[i - 1][j - num];
+//                } else {
+//                    dp[i][j] = dp[i - 1][j];
+//                }
+//            }
+//        }
+//        return dp[len - 1][target];
+//
+//    }
 }
 //leetcode submit region end(Prohibit modification and deletion)
 
