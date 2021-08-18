@@ -1,7 +1,6 @@
 
 import java.util.*;
 
-<<<<<<< HEAD
 public class Main {
     public static void main(String[] args) {
 
@@ -14,9 +13,10 @@ public class Main {
         s.deleteCharAt(s.length() - 1);
         System.out.println(s.toString());
 
-        int[] nums = {1,2,3,4};
-        
+        int[] nums = {1, 2, 3, 4};
 
+    }
+}
 //        Scanner sc = new Scanner(System.in);
 //        int n = sc.nextInt();
 //        int res = 0;
@@ -25,43 +25,41 @@ public class Main {
 //        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
 //
 //        }
-=======
 
-public class Main {
-    /**
-     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
-     *
-     *
-     * @param n int整型
-     * @param m long长整型
-     * @return long长整型一维数组
-     */
-    public long[] FarmerNN (int n, long m) {
-        // write code here
-        long[] res = new long[n];
-        int i = 0;
-        boolean flag = true;
-        while(m > 0){
-            while(m > 0 && flag){
-                res[i++]++;
-                m--;
-                if(i == n - 1){
-                    flag = false;
-                }
-            }
-
-            while(m > 0 && !flag){
-                res[i--]++;
-                m--;
-                if(i == 0){
-                    flag = true;
-                }
-            }
-        }
-        return res;
->>>>>>> 00994692ae236d6d256285bcf016b0807a9dc7ca
-    }
-}
+//public class Main {
+//    /**
+//     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+//     *
+//     *
+//     * @param n int整型
+//     * @param m long长整型
+//     * @return long长整型一维数组
+//     */
+//    public long[] FarmerNN (int n, long m) {
+//        // write code here
+//        long[] res = new long[n];
+//        int i = 0;
+//        boolean flag = true;
+//        while(m > 0){
+//            while(m > 0 && flag){
+//                res[i++]++;
+//                m--;
+//                if(i == n - 1){
+//                    flag = false;
+//                }
+//            }
+//
+//            while(m > 0 && !flag){
+//                res[i--]++;
+//                m--;
+//                if(i == 0){
+//                    flag = true;
+//                }
+//            }
+//        }
+//        return res;
+//    }
+//}
 
 
 //    public long section (int[] a, int t) {
