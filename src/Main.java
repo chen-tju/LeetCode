@@ -2,14 +2,27 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int res = 0;
 
-        Map<Integer, Integer> map = new HashMap<>();
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+        String a = "ff";
+        String b = new String("ff").intern();
+        System.err.println(a == b);
 
-        }
+        StringBuilder s = new StringBuilder();
+        s.append("1");
+        s.deleteCharAt(s.length() - 1);
+        System.out.println(s.toString());
+
+        int[] nums = {1,2,3,4};
+        
+
+//        Scanner sc = new Scanner(System.in);
+//        int n = sc.nextInt();
+//        int res = 0;
+//
+//        Map<Integer, Integer> map = new HashMap<>();
+//        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+//
+//        }
     }
 }
 
