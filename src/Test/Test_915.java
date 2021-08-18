@@ -1,4 +1,4 @@
-package leetcode.editor.cn;
+package Test;
 
 class Test_915 {
     public void solveSudoku(char[][] board) {

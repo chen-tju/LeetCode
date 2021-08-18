@@ -1,7 +1,6 @@
-package leetcode.editor.cn;
+package Test;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 public class Test_1011 {

@@ -1,4 +1,4 @@
-package leetcode.editor.cn;
+package Test;
 
 public class Test_9_6_1 {
     public static void main(String[] args) {
